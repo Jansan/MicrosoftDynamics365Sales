@@ -24,6 +24,7 @@ namespace MicrosoftDynamics365Sales.Controllers
         {
             return View();
         }
+        [HttpPost]
         public ActionResult Login(CrmAccountViewModel vm)
         {
             if (!ModelState.IsValid)
