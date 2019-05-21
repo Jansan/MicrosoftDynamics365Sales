@@ -117,11 +117,16 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\CrmAccountsController.cs" />
     <Compile Include="DAL\DAL_AccountEntity.cs" />
+    <Compile Include="DAL\DAL_ContactEntity.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Account.cs" />
+    <Compile Include="Models\Contact.cs" />
     <Compile Include="Models\CrmAccount.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\AccountViewModel.cs" />
+    <Compile Include="ViewModels\ContactViewModel.cs" />
     <Compile Include="ViewModels\CrmAccountViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
