@@ -13,6 +13,10 @@ namespace MicrosoftDynamics365Sales.Controllers
         {
             return View();
         }
+        public ActionResult Login()
+        {
+            return View();
+        }
 
     }
 }

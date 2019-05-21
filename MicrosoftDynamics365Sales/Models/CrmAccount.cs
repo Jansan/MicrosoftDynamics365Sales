@@ -8,9 +8,9 @@ namespace MicrosoftDynamics365Sales.Models
 {
     public class CrmAccount
     {
-        [Display(Name ="User Name")]
+        [Display(Name = "User Name")]
         [DataType(DataType.EmailAddress)]
-        [Required(ErrorMessage ="UserId email is required")]
+        [Required(ErrorMessage = "UserId email is required")]
         public string UserIdEmail { get; set; }
 
         [Display(Name = "Password")]
@@ -22,6 +22,5 @@ namespace MicrosoftDynamics365Sales.Models
         [DataType(DataType.Url)]
         [Required(ErrorMessage = "CRM Web service URL is required")]
         public string CrmWebServiceUrl { get; set; }
-
     }
 }
