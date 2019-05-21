@@ -113,6 +113,7 @@
     </Compile>
     <Compile Include="Models\CrmAccount.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\CrmAccountViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
