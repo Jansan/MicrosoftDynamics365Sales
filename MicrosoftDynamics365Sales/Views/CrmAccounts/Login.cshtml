@@ -1,11 +1,7 @@
 ﻿@model MicrosoftDynamics365Sales.ViewModels.CrmAccountViewModel
 @{
-                /**/
-
-                /**/
-
-                ViewBag.Title = "Login";
-                Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <h2>Login</h2>
@@ -27,7 +23,7 @@
         @Html.EditorFor(m => m.CrmWebServiceUrl)
         @Html.ValidationMessageFor(m => m.CrmWebServiceUrl)
     </div>
-    <input type="submit" value="Login" class="btn btn-primary"/>
+    <input type="submit" value="Login" class="btn btn-primary" />
     <p>@ViewBag.FailedConnection</p>
     <p>@ViewBag.Wrong</p>
 }

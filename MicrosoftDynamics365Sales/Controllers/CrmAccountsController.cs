@@ -75,6 +75,12 @@ namespace MicrosoftDynamics365Sales.Controllers
             // return RedirectToAction(nameof(Index));
             return View(vm);
         }
+        //Logout 
+        public ActionResult Logout()
+        {
+            Session.Abandon();
+            return RedirectToAction("Login","CrmAccounts");
+        }
 
     }
 }
