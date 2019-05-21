@@ -8,23 +8,26 @@ namespace MicrosoftDynamics365Sales.Models
 {
     public class Account
     {
+        public Guid AccountId { get; set; }
+
+        [StringLength(255)]
         [DataType(DataType.Text)]
-        [Display(Name = "First Name")]
-        [Required(ErrorMessage ="FirstName is required")]
-        public string FirstName { get; set; }
+        [Display(Name = "Account Name")]
+        [Required(ErrorMessage = "Account Name is required")]
+        public string AccountName { get; set; }
 
+        [StringLength(255)]
         [DataType(DataType.Text)]
-        [Display(Name = "Last Name")]
-        [Required(ErrorMessage = "LastName is required")]
-        public string LastName { get; set; }
+        [Display(Name = "Account Number")]
+        [Required(ErrorMessage = "AccountNumber is required")]
+        public string AccountNumber { get; set; }
 
-        [DataType(DataType.EmailAddress)]
-        [Required(ErrorMessage = "Email is required")]
-        public string Email { get; set; }
+        [StringLength(255)]
+        [DataType(DataType.Text)]
+        [Display(Name = "VatNumber")]
+        [Required(ErrorMessage = "VatNumber is required")]
+        public string VatNumber { get; set; }
 
-        [DataType(DataType.PhoneNumber)]
-        [Required(ErrorMessage = "Mobile is required")]
-        public string Mobile { get; set; }
 
     }
 }
