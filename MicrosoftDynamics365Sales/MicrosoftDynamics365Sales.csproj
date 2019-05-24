@@ -138,6 +138,7 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AccountsController.cs" />
+    <Compile Include="Controllers\ContactsController.cs" />
     <Compile Include="Controllers\CrmAccountsController.cs" />
     <Compile Include="DAL\DAL_AccountEntity.cs" />
     <Compile Include="DAL\DAL_ContactEntity.cs" />
@@ -171,6 +172,7 @@
     <Content Include="Views\CrmAccounts\Login.cshtml" />
     <Content Include="Views\Accounts\Index.cshtml" />
     <Content Include="Views\Accounts\Details.cshtml" />
+    <Content Include="Views\Contacts\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

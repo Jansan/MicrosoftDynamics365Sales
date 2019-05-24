@@ -1,0 +1,9 @@
+﻿@model List<MicrosoftDynamics365Sales.ViewModels.ContactViewModel>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    WebGrid grid = new WebGrid(Model, rowsPerPage: 10);
+}
+
+<h2>Contacts</h2>
+<hr />
