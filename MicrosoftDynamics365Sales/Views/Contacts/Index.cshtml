@@ -7,3 +7,12 @@
 
 <h2>Contacts</h2>
 <hr />
+<div class="row">
+    @grid.GetHtml(
+        tableStyle:"table table-responsive table-striped table-bordered",
+        columns: grid.Columns(
+            grid.Column(header:"First Name", format:@<text><div class="edit" data-id="@item.ContactId" data-propertyname="FirstName">@item.FirstName</div></text>
+            )
+
+    )
+</div>
