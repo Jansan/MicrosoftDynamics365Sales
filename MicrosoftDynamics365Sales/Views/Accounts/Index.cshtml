@@ -1,0 +1,32 @@
+﻿@model List<MicrosoftDynamics365Sales.ViewModels.AccountViewModel>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Accounts</h2>
+<hr />
+@if (!Model.Any())
+{
+    <p>We don't have any accounts yet</p>
+}
+<table id="accounts" class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Account Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var account in Model)
+        {
+            <tr>
+                <td>@Html.ActionLink(account.AccountName, "Details", "Accounts", new { id = account.AccountId}, null)</td>
+            </tr>
+        }
+    </tbody>
+</table>
+@*<script>
+    $(document).ready(function () {
+        $("#accounts").DataTable();
+    })
+</script>*@

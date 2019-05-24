@@ -1,0 +1,17 @@
+﻿@model MicrosoftDynamics365Sales.ViewModels.AccountViewModel
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<br />
+<br />
+@if(Model != null)
+{
+    <ul class="list-group">
+        <li class="list-group-item active">Details</li>
+        <li class="list-group-item"><b>Account Name : </b> @Model.AccountName</li>
+        <li class="list-group-item"><b>Accoun Number : </b> @Model.AccountNumber</li>
+        <li class="list-group-item"><b>Vat Number : </b> @Model.VatNumber</li>
+    </ul>
+}
+
