@@ -18,3 +18,32 @@ grid.Column(header: "Mobile", format:@<text><div class="editMobile" data-id="ite
 )
 )
 </div>
+
+<script>
+    $(document).ready(function () {
+        var oldValue = '';
+        $('.editFirstName').editable('/Contacts/EditContact', {
+            cssclass: 'jeditForm',
+            tooltip: 'Click me to edit',
+            width: 'none',
+            height: 'none',
+            onsubmit: function (settings, original) {
+                oldValue = original.revert;
+            },
+            submitdata: function () {
+                return {
+                    id: $(this).data(id),
+                    PropertyName:$(this).data('propertyname')
+                }
+            },
+            callback: function (value, settings) {
+                var jsonData = $.parseJSON(value);
+                if (jsonData.status) {
+                    $(this).text(jsonData.value);
+                } else {
+                    $(this).text(oldValue);
+                }
+            }
+        })
+    })
+</script>

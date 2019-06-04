@@ -18,6 +18,19 @@ namespace MicrosoftDynamics365Sales.Controllers
           
             return View(contactinfo);
         }
+
+        //EDIT Contact
+        [HttpPost]
+        public ActionResult EditContact(int id, string propertyName, string value)
+        {
+            var status = false;
+            var message = "";
+
+            //Update data to CRM
+            var response = new { value = value, status = status, message = message };
+            return View();
+        }
     }
+
     
 }
