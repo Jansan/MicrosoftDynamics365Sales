@@ -13,7 +13,7 @@
         columns: grid.Columns(
             grid.Column(header: "First Name", format: @<text><div class="editFirstName" data-id="@item.ContactId" data-propertyname="FirstName">@item.FirstName</div></text>),
 grid.Column(header: "Last Name", format:@<text><div class="editLastName" data-id="@item.ContactId" data-propertyname="LastName">@item.LastName</div></text>),
-grid.Column(header: "Email Address", format:@<text><div class="editEmail" data-id="@item.ContactId" data-propertyname="Email">@item.Email</div></text>),
+grid.Column(header: "Email Address", format:@<text><div class="editEmail" data-id="@item.ContactId" data-propertyname="Email"></div>@item.Email</text>),
 grid.Column(header: "Mobile", format:@<text><div class="editMobile" data-id="item.ContactId" data-propertyname="Mobile">@item.Mobile</div></text>)
 )
 )

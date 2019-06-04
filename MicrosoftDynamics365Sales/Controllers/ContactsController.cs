@@ -19,4 +19,5 @@ namespace MicrosoftDynamics365Sales.Controllers
             return View(contactinfo);
         }
     }
+    
 }
