@@ -50,5 +50,23 @@ namespace MicrosoftDynamics365Sales.DAL
                 return info;
             }
         }
+
+        public void UpdateRecord(ContactViewModel contactVm)
+        {
+            using (OrganizationService service = new OrganizationService("MyConnectionString"))
+            {
+                var contactEntity = new Microsoft.Xrm.Sdk.Entity("contact");
+
+                if (contactVm.ContactId != Guid.Empty)
+                {
+                    contactEntity["contactid"] = contactVm.ContactId;
+                }
+
+                contactEntity["firstname"] = contactVm.FirstName;
+                contactEntity["mobilephone"] = contactVm.Mobile;
+                 
+                service.Update(contactEntity);
+            }
+        }
     }
 }
