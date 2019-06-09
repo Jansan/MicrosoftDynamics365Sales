@@ -19,6 +19,11 @@ namespace MicrosoftDynamics365Sales.Controllers
             return View(accountinfo);
         }
 
+        /// <summary>
+        /// Get account details
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>Account details</returns>
         // GET: Account/Details
         public ActionResult Details(Guid id)
         {
