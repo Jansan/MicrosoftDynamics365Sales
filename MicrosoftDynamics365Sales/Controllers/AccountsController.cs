@@ -10,6 +10,10 @@ namespace MicrosoftDynamics365Sales.Controllers
 {
     public class AccountsController : Controller
     {
+        /// <summary>
+        /// GET Accounts
+        /// </summary>
+        /// <returns></returns>
         // GET: Accounts
         public ActionResult Index()
         {
