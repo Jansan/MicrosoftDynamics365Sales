@@ -64,6 +64,25 @@ namespace MicrosoftDynamics365Sales.Controllers
         {
             return View();
         }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult CreateContact(CreateContactViewModel vm)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(vm);
+            }
+            DAL_ContactEntity objDAL = new DAL_ContactEntity();
+            objDAL.PostRecord(vm);
+
+            return RedirectToAction(nameof(Index));
+
+            
+
+        }
+
+
     }
 
     

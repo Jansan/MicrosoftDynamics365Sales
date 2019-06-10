@@ -68,5 +68,19 @@ namespace MicrosoftDynamics365Sales.DAL
                 service.Update(contactEntity);
             }
         }
+
+        public void PostRecord(CreateContactViewModel vm)
+        {
+            using(OrganizationService service = new OrganizationService("MyConnectionString"))
+            {
+                Entity contact = new Entity("contact");
+                contact["firstname"] = vm.FirstName;
+                contact["lastname"] = vm.LastName;
+                contact["emailaddress1"] = vm.Email;
+                contact["mobilephone"] = vm.Mobile;
+
+                service.Create(contact);
+            }
+        }
     }
 }
