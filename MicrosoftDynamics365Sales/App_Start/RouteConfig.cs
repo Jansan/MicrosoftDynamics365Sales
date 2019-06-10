@@ -16,7 +16,7 @@ namespace MicrosoftDynamics365Sales
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "CrmAccounts", action = "Login", id = UrlParameter.Optional }
             );
         }
     }
