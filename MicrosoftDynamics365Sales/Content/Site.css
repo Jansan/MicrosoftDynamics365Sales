@@ -15,4 +15,11 @@ select,
 textarea {
     max-width: 280px;
 }
+.table td {
+    width: 25%;
+}
+
+.saveButton {
+    margin-left: 10px;
+}
 

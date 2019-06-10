@@ -3,8 +3,9 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
     WebGrid grid = new WebGrid(Model, rowsPerPage: 20);
-}
 
+}
+    
 <h2>Contacts</h2>
 <hr />
 <div class="row">
@@ -26,10 +27,20 @@ format:@<text>
 )
 )
 </div>
+<style>
+    .table td{
+        width:25%;
+    }
+    .saveButton{
+        margin-left:10px;
+    }
+</style>
 
 @section scripts{
     <script src="~/Scripts/jquery.jeditable.js"></script>
+
     <script>
+        //First Name Edit JQuery
         $(document).ready(function () {
             var oldValue = '';
             $('.editFirstName').editable('/Contacts/EditContact', {
@@ -37,6 +48,7 @@ format:@<text>
                 tooltip: 'Click me to edit',
                 width: 'none',
                 height: 'none',
+                submit:'Save',
                 onsubmit: function (settings, original) {
                     oldValue = original.revert;
                 },
@@ -55,8 +67,11 @@ format:@<text>
                     }
                 }
             });
+            $('.editFirstName').click(function () {
+                $('button', this).addClass('btn btn-sm btn-success saveButton')
+            })
         })
-
+         //Mobile Edit JQuery
         $(document).ready(function () {
             var oldValue = '';
             $('.editMobile').editable('/Contacts/EditContact', {
@@ -64,6 +79,7 @@ format:@<text>
                 tooltip: 'Click me to edit',
                 width: 'none',
                 height: 'none',
+                submit: 'Save',
                 onsubmit: function (settings, original) {
                     oldValue = original.revert;
                 },
@@ -82,6 +98,9 @@ format:@<text>
                     }
                 }
             });
+            $('.editMobile').click(function () {
+                $('button', this).addClass('btn btn-sm btn-success saveButton')
+            })
         })
     </script>
 
