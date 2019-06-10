@@ -58,6 +58,12 @@ namespace MicrosoftDynamics365Sales.Controllers
 
             return Content(o.ToString());
         }
+
+        //Add New Contact
+        public ActionResult CreateContact()
+        {
+            return View();
+        }
     }
 
     
