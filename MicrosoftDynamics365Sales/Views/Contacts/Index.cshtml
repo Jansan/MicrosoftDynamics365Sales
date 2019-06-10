@@ -28,11 +28,11 @@ format:@<text>
 )
 </div>
 <style>
-    .table td{
-        width:25%;
-    }
     .saveButton{
-        margin-left:10px;
+        margin-left:5px;
+    }
+    .widthSave{
+        width:100px;
     }
 </style>
 
@@ -48,7 +48,8 @@ format:@<text>
                 tooltip: 'Click me to edit',
                 width: 'none',
                 height: 'none',
-                submit:'Save',
+                submit: 'Save',
+                cancel: 'Cancel',
                 onsubmit: function (settings, original) {
                     oldValue = original.revert;
                 },
@@ -68,7 +69,9 @@ format:@<text>
                 }
             });
             $('.editFirstName').click(function () {
-                $('button', this).addClass('btn btn-sm btn-success saveButton')
+                $('select', this).addClass('from-control pull-left widthSave');
+                $('button', this).addClass('btn btn-sm btn-info saveButton');
+                
             })
         })
          //Mobile Edit JQuery
@@ -80,6 +83,7 @@ format:@<text>
                 width: 'none',
                 height: 'none',
                 submit: 'Save',
+                cancel: 'Cancel',
                 onsubmit: function (settings, original) {
                     oldValue = original.revert;
                 },
@@ -99,7 +103,8 @@ format:@<text>
                 }
             });
             $('.editMobile').click(function () {
-                $('button', this).addClass('btn btn-sm btn-success saveButton')
+                 $('select', this).addClass('from-control pull-left widthSave');
+                $('button', this).addClass('btn btn-sm btn-info saveButton')
             })
         })
     </script>
