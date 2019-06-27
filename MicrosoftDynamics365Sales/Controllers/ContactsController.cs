@@ -4,6 +4,7 @@ using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Web;
 using System.Web.Mvc;
 
@@ -80,6 +81,19 @@ namespace MicrosoftDynamics365Sales.Controllers
 
             
 
+        }
+
+        //Delete Contact
+        [HttpPost]
+        //[ValidateAntiForgeryToken]
+        public ActionResult DeleteContact(Guid? contactId)
+        {
+            
+                DAL_ContactEntity objDAL = new DAL_ContactEntity();
+                objDAL.DeleteRecord(contactId);
+
+                return View(nameof(Index));
+                    
         }
 
 

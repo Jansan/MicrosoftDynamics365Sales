@@ -82,5 +82,13 @@ namespace MicrosoftDynamics365Sales.DAL
                 service.Create(contact);
             }
         }
+
+        public void DeleteRecord(Guid? id)
+        {
+            using(OrganizationService service = new OrganizationService("MyConnectionString"))
+            {
+                service.Delete("contact", id.Value);
+            }
+        }
     }
 }
