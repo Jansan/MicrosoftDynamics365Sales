@@ -195,6 +195,12 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MicrosoftDynamics365Sales.BusinessLayer\MicrosoftDynamics365Sales.BusinessLayer.csproj">
+      <Project>{2d2e1086-109f-4759-916f-83f56475e4d8}</Project>
+      <Name>MicrosoftDynamics365Sales.BusinessLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

@@ -12,6 +12,7 @@ namespace Dynamics365SalesTest.DAL
     {
         public List<AccountViewModel> RetriveRecords()
         {
+            
             using (OrganizationService service = new OrganizationService("MyConnectionString"))
             {
                 QueryExpression query = new QueryExpression

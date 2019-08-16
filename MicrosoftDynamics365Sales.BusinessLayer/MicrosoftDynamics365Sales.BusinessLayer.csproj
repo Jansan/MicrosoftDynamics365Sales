@@ -1,0 +1,11 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MicrosoftDynamics365Sales.DAL\MicrosoftDynamics365Sales.DAL.csproj" />
+  </ItemGroup>
+
+</Project>

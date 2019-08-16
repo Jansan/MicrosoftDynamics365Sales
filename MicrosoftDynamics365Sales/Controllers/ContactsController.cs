@@ -92,7 +92,7 @@ namespace MicrosoftDynamics365Sales.Controllers
                 DAL_ContactEntity objDAL = new DAL_ContactEntity();
                 objDAL.DeleteRecord(contactId);
 
-                return View(nameof(Index));
+                return View(Index());
                     
         }
 
