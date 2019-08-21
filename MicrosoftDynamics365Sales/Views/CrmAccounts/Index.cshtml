@@ -1,8 +1,26 @@
 ﻿
 @{
-    ViewBag.Title = "Index";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = ">Welcome to Sales Dashboard";
+
 }
+@Html.Partial("_NavBarSales")
+<h2 class="alert-success">Welcome to Sales Dashboard</h2>
 
-    <h2>Dashboard</h2>
 
+<div>
+    <i class="fa fa-user-circle fa-2x alert-success"></i>
+</div>
+<br />
+
+<div>
+    <button type="button" class="btn btn-success">@Html.ActionLink("Accounts", "Index", "Accounts")</button>
+</div>
+<br />
+<br />
+<div>
+    <i class="fa fa-address-card fa-2x alert-success"></i>
+</div>
+<br />
+<div>
+    <button type="button" class="btn btn-success">@Html.ActionLink("Contacts", "Index", "Contacts")</button>
+</div>

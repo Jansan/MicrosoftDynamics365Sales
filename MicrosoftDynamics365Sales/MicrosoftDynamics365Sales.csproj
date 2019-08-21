@@ -185,6 +185,7 @@
     <Content Include="Views\Contacts\Index.cshtml" />
     <Content Include="Views\Shared\_NavBar.cshtml" />
     <Content Include="Views\Contacts\CreateContact.cshtml" />
+    <Content Include="Views\Shared\_NavBarSales.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
